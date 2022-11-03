@@ -55,6 +55,7 @@ html{
     top: 0;
 
     background-color: var(--black);
+    z-index: 3;
 }
 
 .menu{
@@ -67,13 +68,38 @@ html{
     cursor: pointer;
 }
 
+@media (max-width: 750px) {
+    .icon_menu{
+        display: block;
+    }
+    .menu {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 50%;
+        height: 100vh;
+
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--dark);
+        transform: translateX(-100%);
+
+        transition: transform 0.5s;
+    }
+
+    .menu_show {
+        transform: translateX(0);
+    }
+}
+
 .header-information{
     padding: 2rem 0;
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    margin: 1.5rem auto;
+    margin: 1.5rem 0 0;
     gap: 1rem;
 }
 
@@ -125,12 +151,12 @@ html{
 .ocupacion{
     font-weight: 200;
     margin-bottom: 0.6rem;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .experience{
-    font-weight: 550;
-    font-size: 0.7rem;
+    font-weight: 505;
+    font-size: 0.9rem;
     padding: 0 0 0.3rem 0;
 }
 
@@ -159,7 +185,7 @@ html{
 }
 
 .work{
-    margin: 2rem auto;
+    margin: 2rem 0 0;
     display: flex;
     width: 85%;
     height: 55px;
@@ -185,29 +211,298 @@ html{
     height: 90%;
 }
 
-@media (max-width: 750px) {
-    .icon_menu{
-        display: block;
-    }
-    .menu {
-        position: fixed;
-        top: 50px;
-        left: 0;
-        width: 50%;
-        height: 100vh;
-
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: var(--dark);
-        transform: translateX(-100%);
-
-        transition: transform 0.5s;
-    }
-
-    .menu_show {
-        transform: translateX(0);
-    }
+.about-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
 }
 
+.title_section{
+    color: var(--darkcyan);
+    font-size: 30px;
+}
 
+.parrafo{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 0;
+}
+
+.parrafo p{
+    color: var(--whitetype);
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.contenedor_2{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 95%;
+    object-fit: cover;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    align-items: center;
+    padding: 2rem;
+    position: sticky;
+    align-self: flex-start;
+}
+
+.design{
+    width: 60%;
+    min-width: 220px;
+    max-width: 300px;
+    height: 283px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    background-color: white;
+    border-radius: 0.2rem;
+}
+
+.design div{
+    height: 100%;
+    width: 100%;
+}
+
+.imagenes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    height: 100%;
+    width: 100%;
+}
+
+.imagen-uno{
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.imagen-dos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+}
+.vector1{
+    padding: 0;
+    justify-self: start;
+    width: 100%;
+    height: 100%;
+}
+
+.lapiz1{
+    width: 5.5rem;
+    position: absolute;
+    height: 30%;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.design-title{
+    color: #000;
+}
+
+.design-text{
+    color: var(--whitetype);
+}
+
+.habilities{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.contenedor_3{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 85%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.container_text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.porcent{
+    display: flex;
+    font-size: 0.7rem;
+    align-items: flex-end;
+    color: var(--darkcyan);
+}
+
+.habilidad{
+    font-size: 1rem;
+}
+
+.progreso{
+    height: 10px;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.progreso div{
+    height: 100%;
+    background-color: var(--darkcyan);
+    border-radius: 1rem;
+}
+
+.progress{
+    width: 90%;
+}
+
+.progress1{
+    width: 85%;
+}
+
+.progress2{
+    width: 80%;
+}
+
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.portfolio img{
+    width: 280px;
+}
+
+.contenedor_4{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 95%;
+    object-fit: cover;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    align-items: center;
+    align-self: flex-end;
+    padding-bottom: 2rem;
+    padding-right: 1rem;
+    position: sticky;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.contenedor_5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.contenedor_5-contenedor{
+    width: 70%;
+    min-width: 180px;
+    max-width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    background-color: white;
+    border-radius: 0.2rem;
+}
+
+.contacto_imagen-imagen-uno{
+    width: auto;
+}
+
+.icono-contacto{
+    width: 5rem;
+    position: absolute;
+    height: 13%;
+}
+
+.contacto_imagen-imagen-dos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.contenedor_5-design-title{
+    color: var(--black);
+    font-size: 20px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+}
+
+footer div{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div p{
+    color: var(--darkcyan);
+    font-size: 20px;
+    align-items: flex-start;
+    
+}
+footer div p img{
+    display: inline;
+    width: 20px;
+    height: 20px;
+}
