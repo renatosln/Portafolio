@@ -114,10 +114,26 @@ html{
 .photo{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 75%;
     max-width: 15.5rem;
     height: 15.5rem;
     background-color: var(--dark);
+    border-radius: 50%;
+}
+
+.photo div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.imagen_personal{
+    width: 80%;
+    height: 100%;
     border-radius: 50%;
 }
 
@@ -264,15 +280,14 @@ html{
     max-width: 950px;
     align-items: center;
     padding: 2rem;
-    position: sticky;
 }
 
-@media (max-width: 780px){
+@media (max-width: 1200px){
     .contenedor_2{
         display: flex;
         flex-direction: row;
         gap: 1rem;
-        width: 95%;
+        width: 100%;
         object-fit: cover;
         scroll-snap-type: x mandatory;
         overflow-x: scroll;
@@ -280,15 +295,21 @@ html{
         align-items: center;
         padding: 2rem;
         position: sticky;
-        align-self: flex-start;
+        align-self: center;
     }
+}
+
+@media (min-width: 1200px){
+.contenedor_2{
+    justify-content: center;
+}
 }
 
 .design{
     width: 60%;
     min-width: 220px;
     max-width: 280px;
-    height: 283px;
+    height: 316px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -410,15 +431,27 @@ html{
 }
 
 .progress{
-    width: 90%;
+    width: 70%;
 }
 
 .progress1{
-    width: 85%;
+    width: 75%;
 }
 
 .progress2{
-    width: 80%;
+    width: 30%;
+}
+
+.progress3{
+    width: 40%;
+}
+
+.progress4{
+    width: 50%;
+}
+
+.progress5{
+    width: 95%;
 }
 
 .portfolio{
@@ -557,11 +590,6 @@ footer div p img{
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-    }
-
-    .imagen_personal{
-        width: 250px;
-        height: 380px;
     }
 
     .personal-information{
